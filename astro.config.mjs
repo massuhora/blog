@@ -3,10 +3,15 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
-  output: 'static', // Explicitly specify static output (which is also the default)
+  // Explicitly specify static output (which is also the default)
+  output: 'static',
+
   site: 'https://your-domain.com',
+
   // Enable built-in image optimization with specific settings
   image: {
     service: {
@@ -26,12 +31,16 @@ export default defineConfig({
       }
     }
   },
+
   vite: {
     // Using Tailwind CSS v4 with @tailwindcss/vite
     plugins: [tailwindcss()]
   },
+
   integrations: [
     mdx(),
     sitemap()
-  ]
+  ],
+
+  adapter: cloudflare()
 });
