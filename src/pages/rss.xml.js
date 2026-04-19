@@ -10,8 +10,8 @@ export async function GET(context) {
   );
   
   return rss({
-    title: 'Brook Blog',
-    description: 'A minimalist blog template focusing on clean typography and distraction-free reading experience',
+    title: 'Massu Hora',
+    description: 'A personal blog by Massu Hora focusing on clean typography and distraction-free reading experience',
     site: context.site,
     items: sortedPosts.map((post) => ({
       title: post.data.title,
