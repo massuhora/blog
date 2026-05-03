@@ -32,18 +32,18 @@ const publishDate = new Date(date);
   <article id="main-content">
     <header class="max-w-3xl mx-auto mb-10">
       <div class="text-gray-500 text-sm mb-2">
-        <time datetime={publishDate.toISOString()}>{formatDate(date)}</time> • <span aria-label={`${readingTime} minute read`}>{readingTime} min read</span>
+        <time datetime={publishDate.toISOString()}>{formatDate(date)}</time> • <span aria-label={`${readingTime} 分钟阅读`}>{readingTime} 分钟阅读</span>
       </div>
       <h1 class="text-5xl mb-6" transition:name={`title-${slug}`}>{title}</h1>
       {excerpt && <p class="text-xl text-gray-500">{excerpt}</p>}
 
       {tags && tags.length > 0 && (
-        <div class="mt-4 mb-4 flex flex-wrap gap-2" aria-label="Tags">
+        <div class="mt-4 mb-4 flex flex-wrap gap-2" aria-label="标签">
           {tags.map((tag) => (
             <a
               href={`/tags/${tag}`}
               class="tag"
-              aria-label={`View all posts tagged ${tag}`}
+              aria-label={`查看所有关于「${tag}」的文章`}
             >
               {tag}
             </a>
@@ -56,7 +56,7 @@ const publishDate = new Date(date);
       <div class="max-w-4xl mx-auto mt-2 mb-10 feature-image" transition:name={`image-${slug}`}>
         <img
           src={optimizedImagePath}
-          alt={`Featured image for "${title}"`}
+          alt={`${title} 的特色图片`}
           class="w-full h-full object-cover"
           loading="eager"
           decoding="async"

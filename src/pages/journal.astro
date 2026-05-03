@@ -17,17 +17,17 @@ const posts = sortedPosts.map(post => ({
 }));
 ---
 
-<BaseLayout title="Journal">
+<BaseLayout title="日志">
   <div class="max-w-3xl mx-auto">
     <header class="mb-12 text-center" transition:animate="fade">
-      <h1 class="text-5xl mb-4">Journal</h1>
+      <h1 class="text-5xl mb-4">日志</h1>
       <p class="text-xl text-muted-foreground">
-        Thoughts, stories, and ideas worth sharing
+        值得分享的想法、故事和灵感
       </p>
     </header>
 
     <div transition:animate="fade">
-      <PostListWithThumbnails posts={posts} showTags={true} title="All Posts" />
+      <PostListWithThumbnails posts={posts} showTags={true} title="全部文章" />
     </div>
   </div>
 </BaseLayout>

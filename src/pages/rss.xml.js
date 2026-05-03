@@ -10,8 +10,8 @@ export async function GET(context) {
   );
   
   return rss({
-    title: 'Massu Hora',
-    description: 'A personal blog by Massu Hora focusing on clean typography and distraction-free reading experience',
+    title: 'massuhora',
+    description: 'massuhora 的个人博客，专注于简洁排版和无干扰的阅读体验',
     site: context.site,
     items: sortedPosts.map((post) => ({
       title: post.data.title,
@@ -19,6 +19,6 @@ export async function GET(context) {
       description: post.data.excerpt,
       link: `/posts/${post.id}/`,
     })),
-    customData: `<language>en-us</language>`,
+    customData: `<language>zh-cn</language>`,
   });
 }
