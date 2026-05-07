@@ -10,8 +10,8 @@ export async function GET(context) {
   );
   
   return rss({
-    title: 'massuhora',
-    description: 'massuhora 的个人博客，专注于简洁排版和无干扰的阅读体验',
+    title: 'Caz',
+    description: 'Caz 的个人博客，专注于简洁排版和无干扰的阅读体验',
     site: context.site,
     items: sortedPosts.map((post) => ({
       title: post.data.title,
