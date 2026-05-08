@@ -10,7 +10,7 @@ export default defineConfig({
   // Explicitly specify static output (which is also the default)
   output: 'static',
 
-  site: 'https://your-domain.com',
+  site: 'https://blog.caztang.com',
 
   // Enable built-in image optimization with specific settings
   image: {
